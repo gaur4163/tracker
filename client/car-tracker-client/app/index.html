@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en"  ng-app="plunker">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Gaurav Saxena">
+
+  <title>Car Tracker Client Application</title>
+
+
+
+ <!-- Bootstrap Core CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<!--  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
+  <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+ <link href="style/css/bootstrap.css" rel="stylesheet">
+
+ <link rel="stylesheet" href="style/css/app.css" />
+  <script src="style/JS/bootstrap.min.js"></script>
+  <script src="style/JS/jquery.min.js"></script>
+
+
+
+
+</head>
+
+<body id="page-top" class="index">
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed"
+              data-toggle="collapse" data-target="#myInverseNavbar2"
+              aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span> <span
+              class="icon-bar"></span> <span class="icon-bar"></span> <span
+              class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#!/cars">Car Tracker Client Application</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="myInverseNavbar2">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a class="page-scroll" href="#!/cars">Car List</a></li>
+        <li><a class="page-scroll" href="#!/alerts">View All High Alerts</a></li>
+       </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+
+
+<div ng-view>
+
+</div>
+
+<script src="https://code.angularjs.org/1.6.4/angular.min.js"></script>
+<script src="https://code.angularjs.org/1.6.4/angular-route.min.js"></script>
+
+<script src="app.js"></script>
+<script src="services/car.service.js"></script>
+<script src="services/alert.service.js"></script>
+<script src="controllers/car-list/car-list.controller.js"></script>
+<script src="controllers/car-detail/car-detail.controller.js"></script>
+<script src="controllers/alerts-allhigh/alerts-allhigh.controller.js"></script>
+<script src="controllers/alerts-detail/alerts-detail.controller.js"></script>
+<script src="controllers/car-detail/car-detail.readings.controller.js"></script>
+<script src="controllers/car-detail/car-detail.plotenginerpm.controller.js"></script>
+<script src="controllers/car-detail/car-detail.plot.controller.js"></script>
+<script src="controllers/car-detail/car-detail.readingstimed.controller.js"></script>
+<script src="controllers/car-detail/car-detail.readingsengtimed.controller.js"></script>
+<script type="text/javascript" src="style/JS/fusioncharts.js"></script>
+<script type="text/javascript" src="style/JS/angular-fusioncharts.min.js"></script>
+<script type="text/javascript" src="style/JS/fusioncharts.charts.js"></script>
+
+
+<script>document.write('<base href="' + document.location + '" />');</script>
+
+</body>
+
+</html>

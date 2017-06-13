@@ -1,0 +1,39 @@
+<div class="container-fluid">
+    <div class="row content">
+        <div class="col-sm-2 sidenav">
+        </div>
+
+        <div class="col-sm-10">
+
+<h1>All Alerts for Selected Vehicle</h1>
+
+
+<h1>All High Alerts in past 2 hours</h1>
+<div id="wrapper">
+    <h2>To sort the table by count of alerts or year. Click the table headers </h2>
+    <table id="keywords" cellspacing="0" cellpadding="0">
+        <thead>
+        <tr>
+            <th>Vin</th>
+            <th ng-click="alertAllVm.sorter.sortBy='alertsCount'; alertAllVm.sorter.sortOrder = !alertAllVm.sorter.sortOrder;">Count of Alerts</th>
+            <th>Make</th>
+            <th>Model</th>
+            <th ng-click="alertAllVm.sorter.sortBy='year'; alertAllVm.sorter.sortOrder = !alertAllVm.sorter.sortOrder;">Year</th>
+            <th>Last Service Date</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="car in alertAllVm.alerts.vehicles | orderBy:alertAllVm.sorter.sortBy:alertAllVm.sorter.sortOrder">
+           <td class="lalign"><a ng-href="#!/cars/{{car.vin}}">{{car.vin}}</a></td>
+            <td>{{car.alertsCount}}</td>
+            <td>{{car.make}}</td>
+            <td>{{car.model}}</td>
+            <td>{{car.year}}</td>
+            <td>{{car.lastServiceDate | date:'medium'}}</td>
+        </tr>
+
+        </tbody>
+    </table>
+
+
+</div></div></div></div>
